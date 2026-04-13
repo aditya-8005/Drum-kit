@@ -1,0 +1,193 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  text-align: center;
+  background: url("images/bg.jpg") no-repeat center/cover;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* DARK OVERLAY */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+  position: relative;
+  z-index: 1;
+
+
+  padding:40px 20px;
+}
+
+/* TITLE */
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: #ff3c3c;
+
+  text-shadow: 
+    0 0 10px #1e00ff,
+    0 0 20px #1e00ff,
+    0 0 40px #1e00ff;
+}
+
+/* SUBTITLE */
+#subtitle {
+  font-family: 'Metal Mania', cursive;
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* DRUM SET */
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* DRUM BUTTONS */
+.drum {
+  width: 28vw;              /* 🔥 BIG buttons */
+  height: 28vw;
+  font-size: 6vw;
+
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.2);
+
+  font-weight: bold;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #00d4ff;
+
+  text-shadow: 
+    0 0 8px #ff00fb,
+    0 0 15px #e600ff,
+    0 0 5px rgb(0, 0, 0);
+
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.6),
+    inset 0 0 10px rgba(255,255,255,0.1);
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.drum:hover {
+  color: #ff3c3c;
+
+  text-shadow: 
+    0 0 10px #0036ca,
+    0 0 20px #0036ca;
+
+  
+  transform: scale(1.15) rotate(2deg);
+
+  box-shadow: 
+    0 0 15px #ff0000,
+    0 0 30px #ff0000,
+    0 15px 35px rgba(0,0,0,0.8);
+}
+
+/* CLICK */
+.drum:active {
+  transform: scale(0.95);
+}
+
+/* JS PRESSED */
+.pressed {
+  transform: scale(0.9);
+  opacity: 0.7;
+  box-shadow: 
+    0 0 10px #fff,
+    0 5px 15px rgba(255,255,255,0.3);
+}
+
+/* DRUM IMAGES */
+.w { background-image: url("images/tom1.png"); }
+.a { background-image: url("images/tom2.png"); }
+.s { background-image: url("images/tom3.png"); }
+.d { background-image: url("images/tom4.png"); }
+.j { background-image: url("images/snare.png"); }
+.k { background-image: url("images/crash.png"); }
+.l { background-image: url("images/kick.png"); }
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  border-top: 2px solid #00d4ff;
+  text-shadow: 0 0 8px #00d4ff;
+}
+
+/*  MOBILE (SMALL DEVICES) */
+
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 9vw;
+  }
+
+  #subtitle {
+    font-size: 4vw;
+  }
+
+  .set {
+    gap: 12px;
+  }
+
+  .drum {
+    width: 30vw;     /* 🔥 EVEN BIGGER */
+    height: 30vw;
+    font-size: 7vw;
+  }
+}
+/* LARGE SCREENS */
+
+
+@media (min-width: 1200px) {
+  .drum {
+    width: 140px;
+    height: 140px;
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+}
